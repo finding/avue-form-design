@@ -339,6 +339,9 @@ export default {
       type: Boolean,
       default: true
     },
+    configFields: {
+      type: Array,
+    },
     includeFields: {
       type: Array,
       default: () => {
@@ -391,12 +394,14 @@ export default {
       } else {
         return `${this.asideRightWidth}px`
       }
+    },
+    fields() {
+      return this.configFields ? this.configFields : fields
     }
   },
   data() {
     return {
       widgetEmpty,
-      fields,
       widgetForm: {
         column: [],
         labelPosition: 'left',
