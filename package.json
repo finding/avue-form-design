@@ -1,11 +1,11 @@
 {
-  "name": "@sscfaith/avue-form-design",
+  "name": "@finding/avue-form-design",
   "author": {
-    "name": "SSC",
-    "url": "https://github.com/sscfaith",
-    "email": "273702440@qq.com"
+    "name": "nuchect",
+    "url": "https://github.com/finding",
+    "email": "nuchect@qq.com"
   },
-  "version": "1.4.4",
+  "version": "1.0.0",
   "main": "lib/index.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -36,7 +36,7 @@
   ],
   "repository": {
     "type": "github",
-    "url": "https://github.com/sscfaith/avue-form-design"
+    "url": "https://github.com/finding/avue-form-design"
   },
   "keywords": [
     "vue",

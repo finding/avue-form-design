@@ -34,15 +34,14 @@ $ npm i @smallwei/avue
 ### 组件
 
 ```sh
-$ npm i @sscfaith/avue-form-design
+$ npm i @finding/avue-form-design
 或
-$ yarn add @sscfaith/avue-form-design
+$ yarn add @finding/avue-form-design
 ```
 
 ### 源码
 
-<a href="https://github.com/sscfaith/avue-form-design" target="_blank">github</a> or
-<a href="https://gitee.com/sscgh/avue-from-design" target="_blank">gitee</a>
+<a href="https://github.com/finding/avue-form-design" target="_blank">github</a>
 
 ```sh
 $ yarn
@@ -56,7 +55,7 @@ $ yarn serve
 ## 使用
 
 ```
-import AvueFormDesign from '@sscfaith/avue-form-design'
+import AvueFormDesign from '@finding/avue-form-design'
 
 Vue.use(AvueFormDesign)
 ```
@@ -117,9 +116,9 @@ Vue.use(AvueFormDesign)
 
 ### 插槽
 | 名称 | 说明 |
-| ------ | ------ | 
-| toolbar | 顶部工具栏右侧插槽 | 
-| toolbar-left | 顶部工具栏左侧插槽 | 
+| ------ | ------ |
+| toolbar | 顶部工具栏右侧插槽 |
+| toolbar-left | 顶部工具栏左侧插槽 |
 
 ### Avue插件
 
@@ -145,9 +144,6 @@ $ yarn lib
 $ yarn build
 ```
 
-## 捐赠
-如果你觉得本项目帮助到你的话，可以给作者买杯咖啡。
-<img src="https://form.beta.kim/donate.png">
 
 ## License
 
