@@ -1,11 +1,11 @@
 {
-  "name": "@finding/avue-form-design",
+  "name": "@freecoder/avue-form-design",
   "author": {
     "name": "nuchect",
     "url": "https://github.com/finding",
     "email": "nuchect@qq.com"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
