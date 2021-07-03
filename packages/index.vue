@@ -158,6 +158,7 @@
       <el-aside class="widget-config-container"
                 :width="rightWidth">
         <el-tabs v-model="configTab"
+                  v-if="showRight"
                  stretch>
           <el-tab-pane label="字段属性"
                        name="widget"
@@ -172,6 +173,7 @@
             <form-config :data="widgetForm"></form-config>
           </el-tab-pane>
         </el-tabs>
+        <slot name="right-fileds-config" :widgetFormSelect="widgetFormSelect"></slot>
       </el-aside>
       <!-- 弹窗 -->
       <!-- 导入JSON -->
@@ -360,6 +362,10 @@ export default {
     defaultValues: {
       type: Object
     },
+    showRight: {
+      type: Boolean,
+      default: true
+    }
   },
   watch: {
     options: {
