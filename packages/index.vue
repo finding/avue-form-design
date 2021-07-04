@@ -148,10 +148,13 @@
           </div>
         </el-header>
         <el-main :style="{background: widgetForm.column.length == 0 ? `url(${widgetEmpty}) no-repeat 50%`: ''}">
-          <widget-form ref="widgetForm"
+          <widget-form v-if="showCenter" ref="widgetForm"
                        :data="widgetForm"
+                       :showFormItem="showFormItem"
+                       :widgetFormItemComponent="widgetFormItemComponent"
                        :select.sync="widgetFormSelect"
                        @change="handleHistoryChange(widgetForm)"></widget-form>
+          <slot name="center-form-config" :widgetForm="widgetForm" :widgetFormSelect="widgetFormSelect"></slot>
         </el-main>
       </el-container>
       <!-- 右侧配置 -->
@@ -365,6 +368,18 @@ export default {
     showRight: {
       type: Boolean,
       default: true
+    },
+    showCenter: {
+      type: Boolean,
+      default: true
+    },
+    showFormItem: {
+      type: Boolean,
+      default: true
+    },
+    widgetFormItemComponent: {
+      type: String,
+      default: ''
     }
   },
   watch: {

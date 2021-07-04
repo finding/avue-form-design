@@ -49,8 +49,10 @@
                             :prop="column.prop"
                             :class="{ active: selectWidget.prop == column.prop, 'required': column.required }"
                             @click.native="handleSelectWidget(index)">
-                <widget-form-item :item="column"
+                <widget-form-item v-if="showFormItem" :item="column"
                                   :params="column.params"></widget-form-item>
+                <slot name="widget-form-item" :item="column" :params="column.params"></slot>
+                <component v-if="!showFormItem" :is="widgetFormItemComponent" :item="column" :params="column.params" ></component>
                 <el-button title="删除"
                            @click.stop="handleWidgetDelete(index)"
                            class="widget-action-delete"
@@ -89,7 +91,7 @@ import Draggable from 'vuedraggable'
 export default {
   name: 'widget-form',
   components: { Draggable, WidgetFormItem, WidgetFormTable, WidgetFormGroup },
-  props: ['data', 'select'],
+  props: ['data', 'select', 'showFormItem', 'widgetFormItemComponent'],
   data () {
     return {
       selectWidget: this.select,

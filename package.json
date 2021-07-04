@@ -5,7 +5,7 @@
     "url": "https://github.com/finding",
     "email": "nuchect@qq.com"
   },
-  "version": "1.0.2",
+  "version": "1.0.5",
   "main": "lib/index.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
