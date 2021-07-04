@@ -793,6 +793,9 @@ export default {
         minify: true
       })
       else return await this.transformToAvueOptions(this.widgetForm)
+    },
+    setDefalut(widgetForm) {
+      this.widgetForm = widgetForm
     }
   }
 }
