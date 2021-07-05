@@ -43,12 +43,18 @@
                     :md="column.span || 12"
                     :xs="24"
                     :offset="column.offset || 0">
-              <el-form-item class="widget-form-item"
+              <!-- <el-form-item class="widget-form-item"
                             :label="column.label"
                             :labelWidth="column.labelWidth"
                             :prop="column.prop"
                             :class="{ active: selectWidget.prop == column.prop, 'required': column.required }"
+                            @click.native="handleSelectWidget(index)"> -->
+                    <el-form-item class="widget-form-item"
+                            :prop="column.prop"
+                            :class="{ active: selectWidget.prop == column.prop, 'required': column.required }"
                             @click.native="handleSelectWidget(index)">
+                            <div class="my-form-item-label" v-show="!column.hide">{{ column.label }}</div>
+                            <div class="my-form-item-description" v-html="column.description"></div>
                 <widget-form-item v-if="showFormItem" :item="column"
                                   :params="column.params"></widget-form-item>
                 <slot name="widget-form-item" :item="column" :params="column.params"></slot>
@@ -56,7 +62,7 @@
                 <el-button title="删除"
                            @click.stop="handleWidgetDelete(index)"
                            class="widget-action-delete"
-                           v-if="selectWidget.prop == column.prop"
+                           v-if="selectWidget.prop == column.prop && !['name', 'prior_id', 'description', 'duty_id', 'follow_id'].includes(column.prop)"
                            circle
                            plain
                            size="small"

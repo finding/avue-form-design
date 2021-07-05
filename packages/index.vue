@@ -427,7 +427,7 @@ export default {
         column: [],
         labelPosition: 'left',
         labelSuffix: '：',
-        labelWidth: 120,
+        labelWidth: 1,
         gutter: 0,
         menuBtn: true,
         submitBtn: true,
