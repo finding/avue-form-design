@@ -72,7 +72,7 @@
                 <el-button title="复制"
                            @click.stop="handleWidgetClone(index)"
                            class="widget-action-clone"
-                           v-if="selectWidget.prop == column.prop"
+                           v-if="selectWidget.prop == column.prop && !['name', 'prior_id', 'description', 'duty_id', 'follow_id'].includes(column.prop)"
                            circle
                            plain
                            size="small"
