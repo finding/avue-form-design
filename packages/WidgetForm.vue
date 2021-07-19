@@ -38,7 +38,7 @@
                                  @change="$emit('change')">
               </widget-form-group>
             </div>
-            <el-col v-else
+            <el-col v-else-if="!column.noshow || column.noshow != 1"
                     :key="index"
                     :md="column.span || 12"
                     :xs="24"
